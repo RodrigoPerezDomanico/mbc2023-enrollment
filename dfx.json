@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "firstone_backend": {
+      "main": "src/firstone_backend/main.mo",
+      "type": "motoko"
+    },
+    "firstone_frontend": {
+      "dependencies": [
+        "firstone_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/firstone_frontend/src/index.html"
+      },
+      "source": [
+        "src/firstone_frontend/assets",
+        "dist/firstone_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
